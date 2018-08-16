@@ -7,7 +7,7 @@
     "clean": "rimraf dist",
     "test-watch": "tsc --noUnusedParameters --noUnusedLocals && karma start --no-single-run --auto-watch",
     "commit": "npm run prepublish && npm test && git-cz",
-    "build": "npm run clean && ngc && ng-packagr -p ng-package.json && cp style.css dist/bundles/style.css && rimraf dist/tests",
+    "build": "npm run clean && ngc && ng-packagr -p ng-package.json && cpx style.css dist/bundles/style.css && rimraf dist/tests",
     "semantic-release": "semantic-release pre && npm publish && semantic-release post"
   },
   "repository": {
@@ -50,6 +50,7 @@
     "awesome-typescript-loader": "^3.1.3",
     "codelyzer": "^4.4.4",
     "core-js": "^2.4.1",
+    "cpx": "^1.5.0",
     "istanbul-instrumenter-loader": "^3.0.0",
     "jasmine-core": "^2.6.2",
     "karma": "^1.7.0",
